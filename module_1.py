@@ -200,10 +200,10 @@ def get_top_3_suc_performer_by_discipline_by_year(discipline, school_year):
       row = line.split(',')
       #print row[2]
       if row[0] != 'region' and row[sy] != '-' and row[2] == d:
-        if row[0] in suc:
-          suc[row[0]] += int(row[sy])
+        if row[1] in suc:
+          suc[row[1]] += int(row[sy])
         else:
-          suc[row[0]] = int(row[sy])
+          suc[row[1]] = int(row[sy])
 
   f.close()
 
